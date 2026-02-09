@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather</title>
+  <link rel="stylesheet" href="weather.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="head">
+      <div id="cityName" class="location">Loading...</div>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="City" />
+        <button onclick="getWeather()">Search</button>
+      </div>
+    </div>
+
+    <div class="top-bar">
+      <div id="dateTime"></div><br>
+      <div class="icon-placeholder">
+        <img id="weatherIcon" src="" alt="weather icon"/>
+        <div class="temperature" id="temp">--°C<br><span id="description">--</span></div>
+      </div>
+    </div>
+
+    <div class="addinfo">
+      <div class="info1"><h3>Humidity</h3><p id="humidity">--%</p></div>
+      <div class="info2"><h3>Wind</h3><p id="wind">-- km/h</p></div>
+      <div class="info3"><h3>Pressure</h3><p id="pressure">-- hPa</p></div>
+      <div class="info4"><h3>Visibility</h3><p id="visibility">-- km</p></div>
+    </div>
+
+        <div class="forecast-box" id="hourlyForecast">
+          <p class="forecast-text">Showers and thunderstorms early. Low 20°C.</p>
+          <div class="hourly-forecast">
+            <div class="hour"><p>--</p><img src="https://openweathermap.org/img/wn/10d.png" alt="Rain" /><p>--</p></div>
+            <div class="hour"><p>--</p><img src="https://openweathermap.org/img/wn/10d.png" alt="Rain" /><p>--</p></div>
+            <div class="hour"><p>--</p><img src="https://openweathermap.org/img/wn/10d.png" alt="Rain" /><p>--</p></div>
+            <div class="hour"><p>--</p><img src="https://openweathermap.org/img/wn/10d.png" alt="Rain" /><p>--</p></div>
+            <div class="hour"><p>--</p><img src="https://openweathermap.org/img/wn/10d.png" alt="Rain" /><p>--</p></div>
+            <div class="hour"><p>--</p><img src="https://openweathermap.org/img/wn/10d.png" alt="Rain" /><p>--</p></div>
+          </div>
+        </div>
+
+    <div class="air-quality-box">
+      <p><strong>Air Quality</strong></p>
+      <p id="airQuality">Loading...</p>
+    </div>
+
+    <div class="weekly-box" id="forecastCards">
+
+    </div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
